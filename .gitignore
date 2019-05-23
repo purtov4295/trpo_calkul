@@ -1,2 +1,4 @@
-*.o
-geometry
+build/src/*.o
+build/test/*.o
+bin/calculator
+bin/calculator_test
