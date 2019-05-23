@@ -8,3 +8,4 @@ float sum(float x, float y);
 float difference(float x, float y);
 float mult(float a, float b);
 float division(float a, float b);
+int remainde(int x, int y);

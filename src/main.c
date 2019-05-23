@@ -37,6 +37,15 @@ int main()
         ans = division(a, b);
         print(ans, i);
     }
+    if (c=='%')
+    {
+        float roundf (float a);
+        float roundf (float b);
+        int x = (int)a;
+        int y = (int)b;
+        ans = remainde(x, y);
+        printf("%.0f\n", ans);
+    }
     
     return 0;
 }
