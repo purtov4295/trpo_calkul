@@ -3,4 +3,7 @@ compiler: gcc
 dist: xenial
 script:
 - git ls-files src/ | xargs clang-format -i && git diff --exit-code
+- cd thirdparty
+- git ls-files ../test/ | xargs clang-format -i && git diff --exit-code
+- cd ..
 - make 
