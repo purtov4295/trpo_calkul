@@ -7,3 +7,4 @@ float search_y(float b, int j1, float j2);
 float sum(float x, float y);
 float difference(float x, float y);
 float mult(float a, float b);
+float division(float a, float b);

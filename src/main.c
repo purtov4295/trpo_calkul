@@ -32,6 +32,11 @@ int main()
         ans = mult(a, b);
         print(ans, i);
     }
+    if (c=='/')
+    {
+        ans = division(a, b);
+        print(ans, i);
+    }
     
     return 0;
 }

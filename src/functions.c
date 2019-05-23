@@ -134,3 +134,13 @@ float mult(float a, float b)
 {
     return a * b;
 }
+float division(float a, float b)
+{  
+    if (b!=0)
+        return a / b;
+    else 
+    {
+       printf("You cannot divide by 0\n");
+       exit(0); 
+    }
+}
