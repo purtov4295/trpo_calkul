@@ -1,8 +1,8 @@
 #define CTEST_MAIN
 #define CTEST_COLOR_OK
 
-#include <functions.h>
 #include <ctest.h>
+#include <functions.h>
 
 int main(int argc, const char** argv)
 {
@@ -23,7 +23,7 @@ CTEST(search_i_test, positive_numbers)
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(search_i_test,negative_numbers)
+CTEST(search_i_test, negative_numbers)
 {
     // Given
     float a = -2.22;

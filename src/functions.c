@@ -1,13 +1,11 @@
+#include "functions.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "functions.h"
-#include <math.h>
 
 int scan_error(float a, float b, char c)
 {
-    if((c!='+') && (c!='-') && (c!='/') && (c!='*') & (c!='%'))
-    {
+    if ((c != '+') && (c != '-') && (c != '/') && (c != '*') & (c != '%')) {
         printf("Error input\n");
         return -1;
     }
@@ -16,19 +14,19 @@ int scan_error(float a, float b, char c)
 
 void print(float ans, int i)
 {
-    if(i==0)
+    if (i == 0)
         printf("%0.0f\n", ans);
-    else if(i==1)
+    else if (i == 1)
         printf("%0.1f\n", ans);
-    else if(i==2)
+    else if (i == 2)
         printf("%0.2f\n", ans);
-    else if(i==3)
+    else if (i == 3)
         printf("%0.3f\n", ans);
-    else if(i==4)
+    else if (i == 4)
         printf("%0.4f\n", ans);
-    else if(i==5)
+    else if (i == 5)
         printf("%0.5f\n", ans);
-    else if(i==6)
+    else if (i == 6)
         printf("%0.6f\n", ans);
     else
         printf("≈%0.6f\n", ans);
@@ -36,57 +34,46 @@ void print(float ans, int i)
 
 int search_i(float a, float b)
 {
-    int k1=10, i=0;
+    int k1 = 10, i = 0;
     float x, y, k2 = 10;
-    if(a>=0 && b>=0)
-    {
+    if (a >= 0 && b >= 0) {
         x = ((int)(a * 1 + .5) / 1.0);
         y = ((int)(b * 1 + .5) / 1.0);
-        while(a!=x || b!=y)
-        {
+        while (a != x || b != y) {
             x = ((int)(a * k1 + .5) / k2);
             y = ((int)(b * k1 + .5) / k2);
-            k1=k1*10;
-            k2=k2*10;
+            k1 = k1 * 10;
+            k2 = k2 * 10;
             i++;
         }
-    }
-    else if(a<=0 && b<=0)
-    {
+    } else if (a <= 0 && b <= 0) {
         x = ((int)(a * 1 - .5) / 1.0);
         y = ((int)(b * 1 - .5) / 1.0);
-        while(a!=x || b!=y)
-        {
+        while (a != x || b != y) {
             x = ((int)(a * k1 - .5) / k2);
             y = ((int)(b * k1 - .5) / k2);
-            k1=k1*10;
-            k2=k2*10;
+            k1 = k1 * 10;
+            k2 = k2 * 10;
             i++;
         }
-    }
-    else if(a<=0 && b>=0)
-    {
+    } else if (a <= 0 && b >= 0) {
         x = ((int)(a * 1 - .5) / 1.0);
         y = ((int)(b * 1 + .5) / 1.0);
-        while(a!=x || b!=y)
-        {
+        while (a != x || b != y) {
             x = ((int)(a * k1 - .5) / k2);
             y = ((int)(b * k1 + .5) / k2);
-            k1=k1*10;
-            k2=k2*10;
+            k1 = k1 * 10;
+            k2 = k2 * 10;
             i++;
         }
-    }
-    else
-    {
+    } else {
         x = ((int)(a * 1 + .5) / 1.0);
         y = ((int)(b * 1 - .5) / 1.0);
-        while(a!=x || b!=y)
-        {
+        while (a != x || b != y) {
             x = ((int)(a * k1 + .5) / k2);
             y = ((int)(b * k1 - .5) / k2);
-            k1=k1*10;
-            k2=k2*10;
+            k1 = k1 * 10;
+            k2 = k2 * 10;
             i++;
         }
     }
@@ -94,9 +81,8 @@ int search_i(float a, float b)
 }
 int search_j(int i)
 {
-    int j=1;
-    while(i!=0)
-    {
+    int j = 1;
+    while (i != 0) {
         j = j * 10;
         i--;
     }
@@ -105,16 +91,17 @@ int search_j(int i)
 float search_x(float a, int j1, float j2)
 {
     float x;
-    if(a>=0){
-        x = ((int)(a * j1 + .5) / j2);}
-    else{
-        x = ((int)(a * j1 - .5) / j2);}
+    if (a >= 0) {
+        x = ((int)(a * j1 + .5) / j2);
+    } else {
+        x = ((int)(a * j1 - .5) / j2);
+    }
     return x;
 }
 float search_y(float b, int j1, float j2)
-{   
+{
     float y;
-    if (b>=0)
+    if (b >= 0)
         y = ((int)(b * j1 + .5) / j2);
     else
         y = ((int)(b * j1 - .5) / j2);
@@ -135,22 +122,20 @@ float mult(float a, float b)
     return a * b;
 }
 float division(float a, float b)
-{  
-    if (b!=0)
+{
+    if (b != 0)
         return a / b;
-    else 
-    {
-       printf("You cannot divide by 0\n");
-       exit(0); 
+    else {
+        printf("You cannot divide by 0\n");
+        exit(0);
     }
 }
 int remainde(int x, int y)
 {
-    if (y!=0)
+    if (y != 0)
         return x % y;
-    else 
-    {
-       printf("You cannot divide by 0\n");
-       exit(0); 
+    else {
+        printf("You cannot divide by 0\n");
+        exit(0);
     }
 }
