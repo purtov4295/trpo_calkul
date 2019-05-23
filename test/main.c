@@ -302,3 +302,73 @@ CTEST(calculation_test, division_negative_numbers)
     const int expected = 1;
     ASSERT_EQUAL(expected, result);
 }
+
+CTEST(calculation_test, remainder_positive_numbers)
+{
+    // Given
+    int x = 6;
+    int y = 4;
+
+    // When
+    const int result = remainde(x, y);
+
+    // Then
+    const int expected = 2;
+    ASSERT_EQUAL(expected, result);
+}
+
+CTEST(calculation_test, remainder_positive_and_negative_numbers)
+{
+    // Given
+    int x = -6;
+    int y = 4;
+
+    // When
+    const int result = remainde(x, y);
+
+    // Then
+    const int expected = -2;
+    ASSERT_EQUAL(expected, result);
+}
+
+CTEST(calculation_test, remainder_positive_and_negative_numbers)
+{
+    // Given
+    int x = 6;
+    int y = -4;
+
+    // When
+    const int result = remainde(x, y);
+
+    // Then
+    const int expected = 2;
+    ASSERT_EQUAL(expected, result);
+}
+
+CTEST(calculation_test, remainder_negative_numbers)
+{
+    // Given
+    int x = -6;
+    int y = -4;
+
+    // When
+    const int result = remainde(x, y);
+
+    // Then
+    const int expected = -2;
+    ASSERT_EQUAL(expected, result);
+}
+
+CTEST(calculation_test, remainder_positive_and_null_numbers)
+{
+    // Given
+    int x = 0;
+    int y = 4;
+
+    // When
+    const int result = remainde(x, y);
+
+    // Then
+    const int expected = 0;
+    ASSERT_EQUAL(expected, result);
+}
