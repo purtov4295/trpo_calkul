@@ -260,3 +260,45 @@ CTEST(calculation_test, mult_negative_numbers)
     const int expected = 4;
     ASSERT_EQUAL(expected, result);
 }
+
+CTEST(calculation_test, division_positive_and_negative_numbers)
+{
+    // Given
+    float a = -2;
+    float b = 2;
+
+    // When
+    const int result = division(a, b);
+
+    // Then
+    const int expected = -1;
+    ASSERT_EQUAL(expected, result);
+}
+
+CTEST(calculation_test, division_positive_numbers)
+{
+    // Given
+    float a = 2;
+    float b = 2;
+
+    // When
+    const int result = division(a, b);
+
+    // Then
+    const int expected = 1;
+    ASSERT_EQUAL(expected, result);
+}
+
+CTEST(calculation_test, division_negative_numbers)
+{
+    // Given
+    float a = -2.2;
+    float b = -2.2;
+
+    // When
+    const int result = division(a, b);
+
+    // Then
+    const int expected = 1;
+    ASSERT_EQUAL(expected, result);
+}
