@@ -27,6 +27,11 @@ int main()
         ans = difference(x, y);
         print(ans, i);
     }
+    if (c=='*')
+    {
+        ans = mult(a, b);
+        print(ans, i);
+    }
     
     return 0;
 }

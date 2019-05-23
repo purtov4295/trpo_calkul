@@ -130,3 +130,7 @@ float difference(float x, float y)
 {
     return x - y;
 }
+float mult(float a, float b)
+{
+    return a * b;
+}
