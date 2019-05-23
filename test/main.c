@@ -331,7 +331,7 @@ CTEST(calculation_test, remainder_positive_and_negative_numbers)
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(calculation_test, remainder_positive_and_negative_numbers)
+CTEST(calculation_test, remainder_negative_positive_and_numbers)
 {
     // Given
     int x = 6;
