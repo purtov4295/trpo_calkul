@@ -125,3 +125,8 @@ float sum(float x, float y)
 {
     return x + y;
 }
+
+float difference(float x, float y)
+{
+    return x - y;
+}
