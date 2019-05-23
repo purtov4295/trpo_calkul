@@ -144,3 +144,13 @@ float division(float a, float b)
        exit(0); 
     }
 }
+int remainde(int x, int y)
+{
+    if (y!=0)
+        return x % y;
+    else 
+    {
+       printf("You cannot divide by 0\n");
+       exit(0); 
+    }
+}
