@@ -22,6 +22,11 @@ int main()
         ans = sum(x, y);
         print(ans, i);
     }
+    if (c=='-')
+    {
+        ans = difference(x, y);
+        print(ans, i);
+    }
     
     return 0;
 }

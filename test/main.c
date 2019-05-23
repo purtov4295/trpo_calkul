@@ -162,3 +162,45 @@ CTEST(calculation_test, sum_positive_and_negative_numbers)
     const int expected = 0;
     ASSERT_EQUAL(expected, result);
 }
+
+CTEST(calculation_test, difference_positive_numbers)
+{
+    // Given
+    float x = 2;
+    float y = 2;
+
+    // When
+    const int result = difference(x, y);
+
+    // Then
+    const int expected = 0;
+    ASSERT_EQUAL(expected, result);
+}
+
+CTEST(calculation_test, difference_negative_numbers)
+{
+    // Given
+    float x = -2;
+    float y = -2;
+
+    // When
+    const int result = difference(x, y);
+
+    // Then
+    const int expected = 0;
+    ASSERT_EQUAL(expected, result);
+}
+
+CTEST(calculation_test, difference_positive_and_negative_numbers)
+{
+    // Given
+    float x = -2;
+    float y = 2;
+
+    // When
+    const int result = difference(x, y);
+
+    // Then
+    const int expected = -4;
+    ASSERT_EQUAL(expected, result);
+}
