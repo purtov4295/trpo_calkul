@@ -26,8 +26,6 @@ void print(float ans, int i)
         printf("%0.4f\n", ans);
     else if (i == 5)
         printf("%0.5f\n", ans);
-    else if (i == 6)
-        printf("%0.6f\n", ans);
     else
         printf("≈%0.6f\n", ans);
 }
